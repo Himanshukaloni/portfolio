@@ -104,12 +104,7 @@ html {
   margin-bottom: 20px;
 }
 
-.download-btn {
-  padding: 10px 20px;
-  background: black;
-  color: white;
-  text-decoration: none;
-}
+
 
 .project-card {
   margin-top: 20px;
@@ -198,8 +193,87 @@ footer {
 #contact-form{
   width: 50%;
   margin: 0 auto;
-  margin-bottom: 70px;
+  margin-bottom: 30vh;
 }   
 #cont{
   text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 0;
+  }
+
+  .container {
+    margin: 0;
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  .navbar {
+    padding: 0 20px;
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+
+  .navbar ul {
+    gap: 15px;
+  }
+
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .image-container img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .content h1 {
+    font-size: 42px;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    width: 90px;
+    height: 90px;
+  }
+
+  .section {
+    padding: 50px 20px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  #contact-form {
+    width: 100%;
+    margin-bottom: 20vh;
+  }
+
+  input, textarea, button {
+    font-size: 14px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .copy {
+    margin-top: 10px;
+  }
 }
