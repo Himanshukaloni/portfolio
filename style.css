@@ -64,25 +64,12 @@ html {
   text-decoration: none;
   font-weight: bold;
   color: black;
-  transition: 0.3s ease;
+  transition: 0.1s ease;
 }
 
 .resume { background: #f4b400; border: 1px solid black; }
 .projects { background: #ff3d00; border: 1px solid black; }
 .contact { background: #7de2e1; border: 1px solid black; }
-
-.btn {
-  transition: 
-    transform 0.25s ease-out,
-    background-color 0.25s ease-out,
-    box-shadow 0.25s ease-out;
-}
-
-.btn:hover {
-  transform: scale(1.08);
-  background-color: transparent;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
 
 
 
@@ -234,6 +221,7 @@ footer {
   resize: vertical;
   min-height: 120px;
 }
+
 
 
 
