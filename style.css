@@ -73,7 +73,7 @@ html {
 
 .btn:hover {
   background-color: transparent;
-  transform: scale(1.05);
+  transform: scale(0.5);
 }
 
 .section {
@@ -203,3 +203,4 @@ footer {
     margin: 0 auto 24px;
   }
 }
+
