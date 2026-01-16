@@ -9,6 +9,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/* NAVBAR */
 .navbar {
   height: 70px;
   display: flex;
@@ -29,6 +30,7 @@ html {
   font-weight: bold;
 }
 
+/* HERO */
 .hero {
   height: calc(100vh - 70px);
   display: flex;
@@ -54,6 +56,7 @@ html {
   margin-top: 20px;
 }
 
+/* BUTTONS */
 .btn {
   width: 100px;
   height: 100px;
@@ -64,21 +67,29 @@ html {
   text-decoration: none;
   font-weight: bold;
   color: black;
-  transition: 0.1s ease;
+  background: transparent;
+  border: 1px solid black;
+  transition: background-color 0.05s linear;
 }
 
-.resume { background: #f4b400; border: 1px solid black; }
-.projects { background: #ff3d00; border: 1px solid black; }
-.contact { background: #7de2e1; border: 1px solid black; }
+/* COLORS */
+.resume { background: #f4b400; }
+.projects { background: #ff3d00; }
+.contact { background: #7de2e1; }
 
+/* INSTANT HOVER */
+.btn:hover {
+  background-color: transparent;
+}
 
-
+/* SECTIONS */
 .section {
   padding: 80px 120px;
 }
 
+/* PROJECTS */
 #projects {
-  background: #ffffff;
+  background: #fff;
 }
 
 .project-card {
@@ -87,7 +98,7 @@ html {
   padding: 25px 30px;
   margin-bottom: 25px;
   background: #fff;
-  transition: 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-card:hover {
@@ -103,9 +114,27 @@ html {
   color: #555;
 }
 
+/* CONTACT FORM (STRUCTURED) */
 #contact-form {
-  width: 50%;
-  margin: 0 auto 30vh;
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+#contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 #contact button {
@@ -118,6 +147,7 @@ html {
   cursor: pointer;
 }
 
+/* FOOTER */
 footer {
   border-top: 1px solid #ccc;
   padding: 10px;
@@ -132,7 +162,7 @@ footer {
   margin-top: 20px;
 }
 
-/* HERO ANIMATION */
+/* HERO ENTRY ANIMATION */
 .image-container,
 .content {
   opacity: 0;
@@ -140,7 +170,9 @@ footer {
   transition: 0.8s ease;
 }
 
-.content { transition-delay: 0.3s; }
+.content {
+  transition-delay: 0.3s;
+}
 
 .hero.show .image-container,
 .hero.show .content {
@@ -148,22 +180,22 @@ footer {
   transform: translateY(0);
 }
 
-.btn {
-  transform: scale(0.8);
-  opacity: 0;
-}
-
+/* BUTTON POP-IN */
 .hero.show .btn {
-  transform: scale(1);
   opacity: 1;
 }
 
-.hero.show .btn:nth-child(1) { transition-delay: 0.4s; }
-.hero.show .btn:nth-child(2) { transition-delay: 0.6s; }
-.hero.show .btn:nth-child(3) { transition-delay: 0.8s; }
+.btn {
+  opacity: 0;
+}
+
+.hero.show .btn:nth-child(1) { transition-delay: 0.13s; }
+.hero.show .btn:nth-child(2) { transition-delay: 0.7s; }
+.hero.show .btn:nth-child(3) { transition-delay: 0.9s; }
 
 /* MOBILE */
 @media (max-width: 768px) {
+
   .hero {
     flex-direction: column;
     height: auto;
@@ -200,29 +232,3 @@ footer {
     margin: 0 auto 24px;
   }
 }
-#contact-form {
-  max-width: 420px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-#contact-form input,
-#contact-form textarea {
-  padding: 12px 14px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  outline: none;
-}
-
-#contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-
-
-
-
