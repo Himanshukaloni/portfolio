@@ -71,10 +71,20 @@ html {
 .projects { background: #ff3d00; border: 1px solid black; }
 .contact { background: #7de2e1; border: 1px solid black; }
 
-.btn:hover {
-  background-color: transparent;
-  transform: scale(0.1);
+.btn {
+  transition: 
+    transform 0.25s ease-out,
+    background-color 0.25s ease-out,
+    box-shadow 0.25s ease-out;
 }
+
+.btn:hover {
+  transform: scale(1.08);
+  background-color: transparent;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
 
 .section {
   padding: 80px 120px;
@@ -203,5 +213,28 @@ footer {
     margin: 0 auto 24px;
   }
 }
+#contact-form {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+#contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+
 
 
