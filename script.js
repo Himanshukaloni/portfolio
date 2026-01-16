@@ -22,3 +22,6 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
 
   window.open(whatsappURL, "_blank");
 });
+window.addEventListener("load", () => {
+  document.querySelector(".hero").classList.add("show");
+});
